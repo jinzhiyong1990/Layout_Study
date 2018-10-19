@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+stretchColumns:
+里面写的数字是: 对应列的索引
+设置可以伸展的列(多了就到屏幕外面了)
+
+
+shrinkColumns:
+设置可以收缩的列
+
+collapseColumns:
+设置可以隐藏的列
+程序里面写的是:
+索引为2的, 被隐藏了, 而不是没写
+-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0,1,2,3"
+    android:shrinkColumns="1"
+    android:collapseColumns="2">
+
+    <!--
+    如果直接在TableLayout中添加控件的话, 那么控件将和父控件等宽
+    如果想让控件在同一行, 那么这些控件的外层一定加一个<TableRow>标签
+    在TableRow中的控件, 宽度都是默认wrap_content
+    -->
+    <EditText />
+
+    <TableRow>
+
+        <Button android:text="7" />
+
+        <Button android:text="8" />
+
+        <Button android:text="9" />
+
+        <Button android:text="/" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button android:text="4" />
+
+        <Button android:text="5" />
+
+        <Button android:text="6" />
+
+        <Button android:text="*" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button android:text="1" />
+
+        <Button android:text="2" />
+
+        <Button android:text="3" />
+
+        <Button android:text="-" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button android:text="0" />
+
+        <Button android:text="." />
+
+        <Button android:text="+" />
+
+        <Button android:text="=" />
+
+    </TableRow>
+
+    <Button android:text="CLEAR" />
+
+</TableLayout>
